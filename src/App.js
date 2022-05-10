@@ -1,13 +1,18 @@
-import './App.css';
-import { UserList } from './features/users/UserList';
+import "./App.css";
+import {UserList} from "./features/users/UserList.jsx";
+import {AddUser} from "./features/users/AddUser.jsx";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="container mx-auto px-2 max-w-5xl pt-10 md:pt-32">
-      <h1 className='text-center font-bold text-2xl text-gray-700'>
+      <h1 className="text-center font-bold text-2xl text-gray-700">
         Crud with redux toolkit
       </h1>
-     <UserList/>
+      <Routes>
+        <Route path="/" element={<UserList />} />
+        <Route path="/add-user" element={<AddUser />} />
+      </Routes>
     </div>
   );
 }

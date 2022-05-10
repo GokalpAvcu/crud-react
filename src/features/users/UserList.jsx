@@ -1,4 +1,5 @@
 import React from "react";
+import {Button } from "../../components/Button";
 
 export const UserList = () => {
   const users = [
@@ -49,15 +50,20 @@ export const UserList = () => {
         </div>
       </div>
     ));
+
+
   return (
-    <div className="grid gap-5 md:grid-cols-2">
-      {users.length ? ( // kullanıcıların bir değere sahip olup olmadığını kontrol ediyorum
-        renderCard()
-      ) : (
-        <p className="text-center col-span-2 text-gray-700 font-semibold">
-          No User
-        </p>
-      )}
+    <div>
+      <Button>Add User</Button>
+      <div className="grid gap-5 md:grid-cols-2">
+        {users.length ? ( // kullanıcıların bir değere sahip olup olmadığını kontrol ediyorum
+          renderCard()
+        ) : (
+          <p className="text-center col-span-2 text-gray-700 font-semibold">
+            No User
+          </p>
+        )}
+      </div>
     </div>
   );
 };
