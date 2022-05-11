@@ -2,6 +2,7 @@ import "./App.css";
 import {UserList} from "./features/users/UserList.jsx";
 import {AddUser} from "./features/users/AddUser.jsx";
 import { Routes, Route, Link } from "react-router-dom";
+import EditUser from "./features/users/EditUser";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<UserList />} />
         <Route path="/add-user" element={<AddUser />} />
+        <Route path="/edit-user:id" element={<EditUser/>} />
       </Routes>
     </div>
   );
